@@ -1,7 +1,8 @@
+import 'dotenv/config';
 import express from 'express';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000 // || means or if the first one is not available use the 3000 port
 app.use(express.json());
 
 let teaData = []
